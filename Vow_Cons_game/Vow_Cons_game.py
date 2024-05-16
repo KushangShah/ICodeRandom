@@ -14,11 +14,12 @@ def vow_cons(string):
     # using for loop to iterate over string
     for i in range(length):
 
+        # checking if string is in vowel or not
         if string[i] in vowels:
             vow += length - i
         else:
             cons += length - i
-
+    # checking if vow is greater then cons or not
     if vow > cons:
         winner = "Player 1"
         score = vow
@@ -26,11 +27,12 @@ def vow_cons(string):
     elif cons > vow:
         winner = "Player 2"
         score = cons
-
+    # If both have same score than print Draw
     else:
         winner = "Draw"
         score = ''
     
+    # Printing the output
     print(f"{winner} {score}")
 
 # intialiaing init function
